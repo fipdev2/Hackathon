@@ -12,6 +12,10 @@ const Recompensa = sequelize.define('Recompensa', {
         type: DataTypes.STRING,
         allowNull: false
     },
+    quantidade: {
+        type: DataTypes.NUMBER,
+        allowNull: false
+    },
 });
 Recompensa.associate = function (models) {
     Recompensa.hasOne(models.Tasks);

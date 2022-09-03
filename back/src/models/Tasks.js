@@ -3,6 +3,11 @@ const sequelize = require("../config/sequelize");
 
 const Tasks = sequelize.define('Tasks', {
 
+    nome: {
+    type: DataTypes.STRING,
+    allowNull: false
+    },
+
     presencial: {
         type: DataTypes.STRING,
         allowNull: false

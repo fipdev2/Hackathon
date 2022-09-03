@@ -32,4 +32,4 @@ Usuario.associate = function (models) {
         Usuario.hasMany(models.Especie)
 
 }
-module.exports = Usuario 
+module.exports = Usuario;

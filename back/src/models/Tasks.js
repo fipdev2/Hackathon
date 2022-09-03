@@ -8,19 +8,11 @@ const Tasks = sequelize.define('Tasks', {
     allowNull: false
     },
 
-    presencial: {
+    tipo: {
         type: DataTypes.STRING,
         allowNull: false
     },
 
-    quiz: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    fotografaEspecie: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
 });
 Tasks.associate = function(models) {
     Tasks.hasOne(models.Recompensa);

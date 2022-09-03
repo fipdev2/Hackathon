@@ -3,15 +3,11 @@ const sequelize = require("../config/sequelize");
 
 const Recompensa = sequelize.define('Recompensa', {
 
-    moeda: {
+    tipo: {
         type: DataTypes.STRING,
         allowNull: false
     },
 
-    cupom: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
     quantidade: {
         type: DataTypes.NUMBER,
         allowNull: false

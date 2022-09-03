@@ -4,7 +4,7 @@ require('./config/sequelize');
 require('./config/auth');
 
 const passport = require('passport');
-require('./middlewares/jwtPassport')(passport);
+// require('./middlewares/jwtPassport')(passport);
 
 
 const app = express();

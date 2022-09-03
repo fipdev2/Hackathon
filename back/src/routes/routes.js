@@ -4,7 +4,7 @@ const EspecieController = require('../controllers/EspecieController');
 const AuthController = require('../controllers/AuthController');
 const FotoController = require('../controllers/FotoController');
 
-const router = require("express").Router();
+const router = Router();
 const passport = require('passport');
 
 //Usuario
@@ -31,20 +31,14 @@ router.delete('/fotos/:id', FotoController.destroy);
 router.put('/fotos/tirarFoto:fotoId', FotoController.tirarFoto);
 router.put('/fotos/reconhecimento:fotoId/:especieId', FotoController.reconhecimento);
 
-
-
-
 //Auth Routes
 router.use('/private', passport.authenticate("jwt", { session: false }));
 router.post('/login', AuthController.login);
 router.get('/private/getDetails', AuthController.getDetails);
 
 
-
-
-
 const TasksController = require("../controllers/TasksController");
-const RecompensaController = require("../controllers/RempensaController")
+const RecompensaController = require("../controllers/RecompensaController")
 
 // Funções das Tasks
 router.post("/Tasks", TasksController.create);
@@ -61,7 +55,5 @@ router.get("/Recompensa", RecompensaController.index);
 router.put("/Recompensa/:id", RecompensaController.update);
 router.delete("/Recompensa/:id", RecompensaController.destroy);
 router.put("/Recompensa/recebeRecompensa/:recompensaId/Tasks/:taskId", RecompensaController.recebeRecompensa);
-
-
 
 module.exports = router;

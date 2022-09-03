@@ -4,8 +4,8 @@ const sequelize = require("../config/sequelize");
 const Tasks = sequelize.define('Tasks', {
 
     nome: {
-    type: DataTypes.STRING,
-    allowNull: false
+        type: DataTypes.STRING,
+        allowNull: false
     },
 
     tipo: {
@@ -14,9 +14,9 @@ const Tasks = sequelize.define('Tasks', {
     },
 
 });
-Tasks.associate = function(models) {
+Tasks.associate = function (models) {
     Tasks.hasOne(models.Recompensa);
-    Tasks.belongsTo(models.User);
+    Tasks.belongsTo(models.Usuario);
 };
 
 

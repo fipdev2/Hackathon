@@ -29,7 +29,12 @@ const Usuario = sequelize.define('Usuario', {
 })
 Usuario.associate = function (models) {
     Usuario.hasMany(models.Foto),
-        Usuario.hasMany(models.Especie)
-
+        Usuario.hasMany(models.Tasks)
+    Usuario.belongsTo(models.Especie),
+        Usuario.belongsToMany(models.Recompensa, {
+            through: models.Carteira,
+            as: 'UsuarioCarteira',
+            foreignKey: 'usuarioId'
+        })
 }
 module.exports = Usuario;

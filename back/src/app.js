@@ -20,6 +20,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
+// var router = express.Router();
 
 app.get('/', (req, res) => {
   res.send('Hello World!')

@@ -20,10 +20,16 @@ const sequelize = (process.env.DB_CONNECTION === 'sqlite') ?
     }
   );
 module.exports = sequelize;
-let i;
-for (i = 1; i < model.length; i++) {
-  require(`../models/${model[i]}`);
-}
+// let i;
+// for (i = 1; i < model.length; i++) {
+//   require(`../models/${model[i]}`);
+// }
+require('../models/Carteira')
+require('../models/Especie')
+require('../models/Foto')
+require('../models/Recompensa')
+require('../models/Tasks')
+require('../models/Usuario')
 
 for (mod in sequelize.models) {
   if (sequelize.models[mod].associate instanceof Function) {

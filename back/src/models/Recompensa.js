@@ -16,15 +16,9 @@ const Recompensa = sequelize.define('Recompensa', {
 Recompensa.associate = function (models) {
     Recompensa.hasOne(models.Tasks);
     Recompensa.belongsToMany(models.Usuario, {
-<<<<<<< Updated upstream
-        through: "carteira",
-        as: "carteira",
-        foreignKey: "carteiraRecompensaId"
-=======
         through: models.Carteira,
         as: "carteiraRecompensa",
         foreignKey: "carteiraId"
->>>>>>> Stashed changes
     });
 };
 

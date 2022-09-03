@@ -61,11 +61,11 @@ const destroy = async (req, res) => {
 // Adicionar Recompensa a Task
 const recebeRecompensa = async (req, res) => {
     const { recompensaId } = req.params;
-    const { taskId } = req.params;
+    const { tasksId } = req.params;
     try {
         const recompensa = await Recompensa.findByPk(recompensaId);
-        const task = await Tasks.findByPk(taskId);
-        await recompensa.setTask(task);
+        const tasks = await Tasks.findByPk(tasksId);
+        await recompensa.setTasks(tasks);
         return res.status(200).json();
 
     } catch (error) {

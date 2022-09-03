@@ -9,8 +9,6 @@ interface ButtonProps {
 }
 
 function Button({ name, icon, onPress }: ButtonProps) {
-
-
     return (
         <>
             <TouchableOpacity onPress={onPress}>

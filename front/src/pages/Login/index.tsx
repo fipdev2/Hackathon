@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { Controller, useForm } from 'react-hook-form';
-import { InputForm, Page, TextError, TurtleTxt } from './style'
+import { Page, TurtleTxt } from './style'
+
 function Login() {
-    const { control, handleSubmit, formState: { errors }, getValues } = useForm<FormData>({ mode: "onTouched" });
+
     return (
         <Page>
             <TurtleTxt>
                 bubble hub
             </TurtleTxt>
-            <Controller
+            {/* <Controller
                 control={control}
                 name='email'
                 defaultValue=''
@@ -29,7 +29,7 @@ function Login() {
                     },
                 }}
             />
-            {errors.nome && <TextError>{errors.nome.message}</TextError>}
+            {errors.nome && <TextError>{errors.nome.message}</TextError>} */}
         </Page>
 
     );

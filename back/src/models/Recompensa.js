@@ -19,7 +19,7 @@ Recompensa.associate = function (models) {
         through: "carteira",
         as: "carteira",
         foreignKey: "carteiraRecompensaId"
-    }); 
+    });
 };
 
 module.exports = Recompensa;

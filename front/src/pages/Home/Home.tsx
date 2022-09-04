@@ -33,7 +33,6 @@ export function Home() {
                         <CardBtnText>Doar</CardBtnText>
                     </CardButton>
 
-
                 </LinearGradient>
             </DonationCard>
 

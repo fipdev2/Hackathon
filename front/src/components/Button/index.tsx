@@ -1,6 +1,5 @@
-import { TouchableOpacity, Text, View } from './style'
+import { BtnTouchableOpacity, BtnText } from './style'
 import * as React from 'react';
-
 
 interface ButtonProps {
     name: string,
@@ -11,9 +10,9 @@ interface ButtonProps {
 function Button({ name, icon, onPress }: ButtonProps) {
     return (
         <>
-            <TouchableOpacity onPress={onPress}>
-                <Text>{name}</Text>
-            </TouchableOpacity>
+            <BtnTouchableOpacity onPress={onPress}>
+                <BtnText>{name}</BtnText>
+            </BtnTouchableOpacity>
         </>
     );
 }

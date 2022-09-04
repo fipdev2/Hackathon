@@ -49,7 +49,7 @@ export const CardText = styled.Text`
 
 export const CardBar = styled.View`
     margin-top: 5%;
-    height: 15%;
+    height: 8%;
     width: 100%;
     background-color: #014659;
     border-radius: 10px;

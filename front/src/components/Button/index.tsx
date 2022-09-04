@@ -13,7 +13,6 @@ function Button({ name, icon, onPress }: ButtonProps) {
         <>
             <TouchableOpacity onPress={onPress}>
                 <Text>{name}</Text>
-                <View></View>
             </TouchableOpacity>
         </>
     );

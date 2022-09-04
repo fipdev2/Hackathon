@@ -26,6 +26,7 @@ export const DonationCard = styled.View`
     margin-right: 6%;
     border-radius: 40px;
     height: 200px;
+    margin-bottom: 15%;
 `
 
 export const CardHeader = styled.View`
@@ -52,6 +53,25 @@ export const CardBar = styled.View`
     width: 100%;
     background-color: #014659;
     border-radius: 10px;
+`
+
+export const CardButton = styled.TouchableOpacity`  
+    margin-top: 5%;
+    width: 40%; 
+    padding: 2%;
+    background-color: #09C6AB;
+    border-radius: 30px;
+    width: 30%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+export const CardBtnText = styled.Text`
+    font-size: 20%;
+    color: white;
+    font-weight: 500;
 `
 
 export const Progress = styled.View`

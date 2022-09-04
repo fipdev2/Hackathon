@@ -1,9 +1,10 @@
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
-import { Image } from 'react-native';
+import { Image, Text } from 'react-native';
+import Button from "../../components/Button";
 import { News } from "../../components/News/News";
 import { newsContent } from "../../constants/newsContent";
-import { CardTitle, DonationCard, Header, Logo, ProfilePhoto, CardHeader, Screen, CardText, CardBar, Progress, NewsSection, NewsTitle } from "./style";
+import { CardTitle, DonationCard, Header, Logo, ProfilePhoto, CardHeader, Screen, CardText, CardBar, Progress, NewsSection, NewsTitle, CardButton, CardBtnText } from "./style";
 
 export function Home() {
     return (
@@ -27,6 +28,11 @@ export function Home() {
                     <CardBar>
                         <Progress></Progress>
                     </CardBar>
+
+                    <CardButton>
+                        <CardBtnText>Doar</CardBtnText>
+                    </CardButton>
+
 
                 </LinearGradient>
             </DonationCard>

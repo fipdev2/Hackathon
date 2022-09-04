@@ -12,7 +12,7 @@ position:relative;
 export const Text = styled.Text`
 color:white;
 font-weight:500;
-font-size:20px;
+font-size:20%;
 `
 export const View = styled.View`
 background: #09C6AB;

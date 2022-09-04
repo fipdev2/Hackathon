@@ -9,6 +9,11 @@ import Button from '../../components/Button';
 import { FcGoogle } from 'react-icons/fc'
 import { BsFacebook, BsTwitter } from 'react-icons/bs'
 
+interface FormData {
+    email: string,
+    password: string,
+}
+
 function Login() {
     const [showPassword, setShowPassword] = useState<boolean>(false);
     const { control, handleSubmit, formState: { errors } } = useForm({
@@ -17,7 +22,7 @@ function Login() {
             password: ''
         }
     });
-    const onSubmit = (data: any) => {
+    const onSubmit = (data: FormData) => {
         console.log(data);
     }
 

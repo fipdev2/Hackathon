@@ -5,7 +5,7 @@ import * as React from 'react';
 interface ButtonProps {
     name: string,
     icon?: string,
-    onPress?: any
+    onPress?: any,
     highlighted?: boolean
 }
 

@@ -1,7 +1,9 @@
-import OnboardingNext from './src/pages/OnboardingNext';
-import * as React from 'react';
+
 import { useFonts } from 'expo-font';
-import Login from './src/pages/Login';
+import React from 'react';
+import Camera from './src/pages/Camera';
+import Tartarugas from './src/pages/Tartarugas';
+import Router from './src/Router/Router';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ 'Turtles': require('./src/fonts/Turtles.otf') });
@@ -10,8 +12,8 @@ export default function App() {
   }
   return (
     <>
-      <Login />
+      {/* <Camera /> */}
+      <Router />
     </>
   );
 }
-

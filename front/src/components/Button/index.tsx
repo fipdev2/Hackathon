@@ -1,6 +1,5 @@
-import { TouchableOpacity, Text, View } from './style'
+import { TouchableOpacity, Text,View} from './style'
 import * as React from 'react';
-
 
 interface ButtonProps {
     name: string,
@@ -9,7 +8,7 @@ interface ButtonProps {
     highlighted?: boolean
 }
 
-function Button({ name, icon, onPress, highlighted }: ButtonProps) {
+function Button({ name, onPress, highlighted }: ButtonProps) {
 
 
     return (

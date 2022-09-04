@@ -1,22 +1,28 @@
 import React from "react"
-import { View, Text, TouchableOpacity, Image } from "react-native"
+import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native"
+import { ScreenContainer, Title, Description, TextView, TurtleGif, GifView } from "./style"
+import { LinearGradient } from 'expo-linear-gradient';
 
 export function OnboardingGif() {
     return(
-        <>
-            <View>
-                
-            </View>
+        <ScreenContainer>
+            <LinearGradient 
+                colors={['#068888', '#02556D']}
+                style={{height: '100%'}}
+            >
 
-            <View>
-                <Text>EXPLORE E CONTRIBUA</Text>
-                <Text>O trabalho para proteger uma espécie beneficia todos nós. Vamos ajudar os animais marinhos!</Text>
+            <GifView>
+                <TurtleGif source={require('../../../assets/gifTurtle.gif')} style={{width:'90%', height: '80%'}}></TurtleGif>
+            </GifView>
 
-                <TouchableOpacity>
-                    <Text>Explore agora</Text>
-                    <Image source={require('../../../assets/arrow.png')}></Image>
-                </TouchableOpacity>
-            </View>
-        </>
+            <TextView>
+                <Title>EXPLORE E CONTRIBUA</Title>
+                <Description>O trabalho para proteger uma espécie beneficia todos nós. Vamos ajudar os animais marinhos!</Description>
+
+            </TextView>
+
+
+            </LinearGradient>
+        </ScreenContainer>
     )
 }

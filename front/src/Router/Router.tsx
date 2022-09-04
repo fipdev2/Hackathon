@@ -1,39 +1,36 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Login from '../Login';
-import Cadastro from '../Cadastro';
-import BottomTabs from './BottomTabs';
+import Tabs from './Tabs';
+import Login from '../pages/Login';
 
 function Router() {
     const Stack = createNativeStackNavigator();
     return (
         <>
-            <NavigationContainer>
+            <NavigationContainer theme={{ ...DefaultTheme, colors: { ...DefaultTheme.colors, primary: 'transparent' } }}>
                 <Stack.Navigator>
                     <Stack.Screen
                         name='Login'
                         component={Login}
                         options={{
                             headerShown: false
-                        }}
-                    />
+                        }} />
                     <Stack.Screen
-                        name='Cadastro'
-                        component={Cadastro}
+                        name='Tabs'
+                        component={Tabs}
                         options={{
                             headerShown: false
                         }} />
-                    <Stack.Screen
-                        name='BottomTabs'
-                        component={BottomTabs}
-                        options={{
-                            headerShown: false
-                        }}
-                    />
+
                 </Stack.Navigator>
             </NavigationContainer>
-        </>);
+
+
+
+
+        </>
+    );
 }
 
 export default Router;

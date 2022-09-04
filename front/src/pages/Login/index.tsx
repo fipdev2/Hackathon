@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { Controller, FormProvider, useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { InputForm, InputSenha, Page, TextError, TouchableOpacity, TurtleTxt, ViewInput, Text, BtnView } from './style';
 import { View, Image } from 'react-native'
-import { AiFillEye, AiFillTwitterCircle, AiOutlineTwitter } from 'react-icons/ai'
+import { AiFillEye, AiOutlineTwitter } from 'react-icons/ai'
 import { AiFillEyeInvisible } from 'react-icons/ai'
 import Button from '../../components/Button';
 import { FcGoogle } from 'react-icons/fc'
-import { BsFacebook, BsTwitter } from 'react-icons/bs'
+import { BsFacebook } from 'react-icons/bs'
+import { useNavigation } from '@react-navigation/native';
 
 interface FormData {
     email: string,
@@ -15,6 +16,7 @@ interface FormData {
 }
 
 function Login() {
+    const navigation = useNavigation();
     const [showPassword, setShowPassword] = useState<boolean>(false);
     const { control, handleSubmit, formState: { errors } } = useForm({
         defaultValues: {
@@ -24,6 +26,7 @@ function Login() {
     });
     const onSubmit = (data: FormData) => {
         console.log(data);
+        navigation.navigate('Tabs')
     }
 
 

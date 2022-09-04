@@ -38,4 +38,4 @@ const seedTask = async function () {
     }
 }
 
-module.exports = seedTasks;
+module.exports = seedTask;

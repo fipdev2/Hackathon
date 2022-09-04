@@ -11,7 +11,7 @@ function TartarugasEncontradas({ imagem, nome, especie }: TartarugasEncontradas)
     return (
         <>
             <Box>
-                <Imagem source={require(`../../../assets/${imagem}.png`)} />
+                <Imagem source={imagem} />
                 <View>
                     <Nome>{nome}</Nome>
                     <Especie>{especie}</Especie>

@@ -14,7 +14,7 @@ function TartarugaCard({ imagem, nome, descricao, }: CardProps) {
     return (
         <>
 
-            <Card source={require(`../../../assets/${imagem}.png`)} imageStyle={{ borderRadius: 7 }} >
+            <Card source={imagem} imageStyle={{ borderRadius: 7 }} >
                 <View style={{
                     backgroundColor: 'rgba(0, 0, 0, .3)', position: 'absolute', width: 358,
                     height: 489, left: 0, top: 0

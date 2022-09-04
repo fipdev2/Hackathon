@@ -9,6 +9,9 @@ import { Dimensions } from 'react-native';
 import { Image } from 'react-native'
 import { HiPuzzle, HiOutlinePuzzle } from 'react-icons/hi'
 import { AiFillGift, AiOutlineGift } from 'react-icons/ai';
+import CameraStack from './CameraStack';
+import turtlefill from '../../assets/turtlefill.png';
+import turtleoutline from '../../assets/turtleoutline.png'
 
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
@@ -57,12 +60,12 @@ function Tabs() {
                     }} />
                 <Tab.Screen
                     name='Tartarugas'
-                    component={Tartarugas}
+                    component={CameraStack}
                     options={{
                         headerShown: false,
                         tabBarIcon: ({ focused = true }: any) => {
-                            let icon = focused ? 'turtlefill' : 'turtleoutline';
-                            return < Image source={require(`../../assets/${icon}.png`)} style={{ height: 32, width: 32 }} />
+                            let icon = focused ? turtlefill : turtleoutline;
+                            return < Image source={icon} style={{ height: 32, width: 32 }} />
                         }
                     }} />
                 <Tab.Screen

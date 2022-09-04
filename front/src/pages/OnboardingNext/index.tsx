@@ -13,7 +13,10 @@ function OnboardingNext() {
                     Registre suas tartarugas, complete desafios, troque por recompensas e ajude a tornar
                     a vida marinha melhor!
                 </Text>
-                <Button name='Começar!' />
+                <Button
+                    name='Começar!'
+                    highlighted={true}
+                />
 
             </BottomView>
         </View>

@@ -6,16 +6,17 @@ interface ButtonProps {
     name: string,
     icon?: string,
     onPress?: any
+    highlighted?: boolean
 }
 
-function Button({ name, icon, onPress }: ButtonProps) {
+function Button({ name, icon, onPress, highlighted }: ButtonProps) {
 
 
     return (
         <>
             <TouchableOpacity onPress={onPress}>
                 <Text>{name}</Text>
-                <View></View>
+                {highlighted && <View />}
             </TouchableOpacity>
         </>
     );
